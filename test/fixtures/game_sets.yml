@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sequence_nr: 1
+  games: MyString
+  tiebreak: MyString
+
+two:
+  sequence_nr: 1
+  games: MyString
+  tiebreak: MyString
