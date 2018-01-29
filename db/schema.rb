@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20180128125323) do
     t.integer "order_nr", null: false
     t.integer "participant_id", null: false
     t.string "participant_type", null: false
-    t.integer "meaning", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +41,10 @@ ActiveRecord::Schema.define(version: 20180128125323) do
     t.integer "tournament_id"
     t.integer "season_id"
     t.integer "user_id"
+    t.integer "max_game_sets", default: 3, null: false
+    t.integer "retired_participant_order_nr"
+    t.integer "winning_participant_order_nr"
+    t.boolean "completed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

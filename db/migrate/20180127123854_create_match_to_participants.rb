@@ -5,7 +5,6 @@ class CreateMatchToParticipants < ActiveRecord::Migration[5.1]
       t.integer :order_nr,          null: false
       t.integer :participant_id,    null: false
       t.string  :participant_type,  null: false
-      t.integer :meaning,           null: false, default: 0
 
       t.timestamps
     end

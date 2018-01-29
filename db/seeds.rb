@@ -7,9 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Creating users..."
-binding.pry
 User.destroy_all
-binding.pry
 me = User.create(
   email: 'tomas.radic@gmail.com',
   password: 'tenniswherever',
@@ -25,7 +23,7 @@ puts "Creating matches, tournaments, seasons..."
 Match.destroy_all
 Tournament.destroy_all
 Season.destroy_all
-winter_2017_2018 = Season.create(name: 'Zima 2017-2018')
+winter_2017_2018 = me.seasons.create(name: 'Zima 2017-2018')
 set1 = GameSet.create(games: [7, 5], sequence_nr: 1)
 set2 = GameSet.create(games: [3, 6], sequence_nr: 2)
 set3 = GameSet.create(games: [1, 0], tiebreak: [7, 4], sequence_nr: 3)
@@ -33,12 +31,13 @@ set3 = GameSet.create(games: [1, 0], tiebreak: [7, 4], sequence_nr: 3)
 match = me.matches.build(
   date_played: '2018-01-15',
   place: 'Dudova, Bratislava',
-  season: winter_2017_2018
+  season: winter_2017_2018,
+  surface: 'hard',
+  completed: true
 )
 
 match.game_sets << set1 << set2 << set3
 match.player_participants << me_player << turky
-binding.pry
 match.save
 
 puts "Finished."

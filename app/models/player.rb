@@ -7,4 +7,6 @@ class Player < ApplicationRecord
   has_many :pairs, through: :pair_to_players
   belongs_to :user, optional: true # not validated, if user is deleted, records are nullified
 
+  validates :name, presence: true
+
 end
