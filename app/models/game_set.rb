@@ -12,10 +12,10 @@ class GameSet < ApplicationRecord
     result = nil
     return result if self.games.nil?
 
-    won_proc = Proc.new do |player0_gems, player1_gems|
-      if player0_gems > player1_gems
+    won_proc = Proc.new do |player0_score, player1_score|
+      if player0_score > player1_score
         0
-      elsif player1_gems > player0_gems
+      elsif player1_score > player0_score
         1
       else
         nil

@@ -29,8 +29,8 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  home: "Home"
+sk:
+  home: "Domov"
   matches:
     index:
-      no_matches: "No matches to show"
+      no_matches: "Žiadne zápasy"

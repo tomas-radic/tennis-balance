@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20180128125323) do
     t.date "date_played"
     t.string "place"
     t.string "surface"
+    t.integer "environment"
     t.integer "tournament_id"
     t.integer "season_id"
     t.integer "user_id"

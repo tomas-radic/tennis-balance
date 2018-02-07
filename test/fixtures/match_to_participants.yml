@@ -3,7 +3,11 @@
 one:
   match_id: 1
   participant_id: 1
+  order_nr: 0
+  participant_type: 'Player'
 
 two:
   match_id: 1
   participant_id: 1
+  order_nr: 1
+  participant_type: 'Player'
